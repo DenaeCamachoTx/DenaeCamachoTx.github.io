@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>EPA Air Quality Analysis | Denae Camacho</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: #f8fafc;
+      color: #1f2937;
+      line-height: 1.7;
+    }
+
+    nav {
+      padding: 18px 8%;
+      background: white;
+      border-bottom: 1px solid #e5e7eb;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #2563eb;
+      font-weight: bold;
+    }
+
+    .hero {
+      max-width: 1000px;
+      margin: auto;
+      padding: 80px 8% 50px;
+    }
+
+    .tag {
+      color: #2563eb;
+      font-size: 14px;
+      font-weight: bold;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    h1 {
+      font-size: 46px;
+      color: #0f172a;
+      margin: 10px 0 15px;
+    }
+
+    .subtitle {
+      font-size: 20px;
+      color: #475569;
+      max-width: 750px;
+    }
+
+    section {
+      max-width: 1000px;
+      margin: auto;
+      padding: 35px 8%;
+    }
+
+    h2 {
+      color: #0f172a;
+      font-size: 28px;
+      margin-bottom: 15px;
+    }
+
+    p {
+      color: #475569;
+      margin-bottom: 15px;
+    }
+
+    ul {
+      margin-left: 22px;
+      color: #475569;
+    }
+
+    li {
+      margin-bottom: 8px;
+    }
+
+    .skills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 15px;
+    }
+
+    .skill {
+      background: white;
+      border: 1px solid #dbe3ee;
+      padding: 8px 14px;
+      border-radius: 999px;
+      font-size: 14px;
+    }
+
+    .code-box {
+      background: #0f172a;
+      color: #e2e8f0;
+      padding: 22px;
+      border-radius: 10px;
+      overflow-x: auto;
+      font-family: Consolas, monospace;
+      font-size: 14px;
+      margin-top: 15px;
+      white-space: pre-wrap;
+    }
+
+    .finding {
+      background: white;
+      border: 1px solid #e2e8f0;
+      border-left: 4px solid #2563eb;
+      padding: 20px;
+      border-radius: 8px;
+      margin-bottom: 15px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 35px;
+      border-top: 1px solid #e5e7eb;
+      background: white;
+      color: #64748b;
+      font-size: 13px;
+      margin-top: 40px;
+    }
+
+    @media (max-width: 700px) {
+      h1 {
+        font-size: 36px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <nav>
+    <a href="index.html">← Back to Portfolio</a>
+  </nav>
+
+  <div class="hero">
+    <div class="tag">Python • pandas • NumPy</div>
+
+    <h1>EPA Air Quality Analysis</h1>
+
+    <p class="subtitle">
+      Exploratory analysis of EPA air-quality data to examine AQI patterns,
+      compare states, and identify areas with higher air-quality concerns.
+    </p>
+  </div>
+
+  <section>
+    <h2>Project Overview</h2>
+
+    <p>
+      This project uses Python, pandas, and NumPy to explore air-quality data
+      from the U.S. Environmental Protection Agency. The analysis focuses on
+      understanding the structure of the dataset, comparing AQI readings across
+      states, and filtering the data to answer specific questions.
+    </p>
+  </section>
+
+  <section>
+    <h2>Business Question</h2>
+
+    <p>
+      How can air-quality data be organized and analyzed to identify patterns,
+      compare geographic areas, and highlight locations with higher AQI values?
+    </p>
+  </section>
+
+  <section>
+    <h2>Tools & Skills Used</h2>
+
+    <div class="skills">
+      <span class="skill">Python</span>
+      <span class="skill">pandas</span>
+      <span class="skill">NumPy</span>
+      <span class="skill">Data Cleaning</span>
+      <span class="skill">Boolean Masking</span>
+      <span class="skill">GroupBy</span>
+      <span class="skill">Data Filtering</span>
+      <span class="skill">Summary Statistics</span>
+    </div>
+  </section>
+
+  <section>
+    <h2>Analysis Process</h2>
+
+    <ul>
+      <li>Loaded CSV data into pandas DataFrames.</li>
+      <li>Reviewed DataFrame structure using head(), info(), and describe().</li>
+      <li>Counted rows by state and county using value_counts().</li>
+      <li>Sorted AQI values from highest to lowest.</li>
+      <li>Selected rows using iloc[].</li>
+      <li>Created Boolean masks to filter California and Washington data.</li>
+      <li>Calculated mean AQI values for Los Angeles County.</li>
+      <li>Grouped data by state using groupby().</li>
+      <li>Combined multiple datasets using pd.concat().</li>
+      <li>Used NumPy arrays to calculate summary statistics.</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Example Python Code</h2>
+
+    <div class="code-box">
+top3.groupby('state_name')['aqi'].mean()
+
+ca_df = top3_sorted[
+    top3_sorted['state_name'] == 'California'
+]
+
+combined_df[
+    (combined_df['state_name'] == 'Washington')
+    & (combined_df['aqi'] >= 51)
+]
+    </div>
+  </section>
+
+  <section>
+    <h2>Key Findings</h2>
+
+    <div class="finding">
+      California contained the largest number of observations among the initial
+      three states examined in the dataset.
+    </div>
+
+    <div class="finding">
+      Los Angeles County appeared more frequently than any other California
+      county in the dataset, making it useful for a more focused AQI analysis.
+    </div>
+
+    <div class="finding">
+      Boolean masking made it possible to isolate specific states and AQI
+      thresholds, including Washington observations with AQI values of 51 or higher.
+    </div>
+  </section>
+
+  <section>
+    <h2>What I Learned</h2>
+
+    <p>
+      This project strengthened my ability to work with pandas DataFrames,
+      filter and group data, calculate summary statistics, and use Boolean
+      conditions to answer specific analytical questions. It also reinforced
+      how Python can be used to efficiently explore and summarize large datasets.
+    </p>
+  </section>
+
+  <footer>
+    © 2026 Denae Camacho | Data Analytics Portfolio
+  </footer>
+
+</body>
+</html>
