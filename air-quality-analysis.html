@@ -59,6 +59,37 @@
       max-width: 750px;
     }
 
+    .hero-buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 24px;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 11px 18px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: 600;
+      transition: 0.2s ease;
+    }
+
+    .btn.primary {
+      background: #2563eb;
+      color: white;
+    }
+
+    .btn.secondary {
+      background: white;
+      color: #2563eb;
+      border: 1px solid #bfdbfe;
+    }
+
+    .btn:hover {
+      transform: translateY(-1px);
+    }
+
     section {
       max-width: 1000px;
       margin: auto;
@@ -121,6 +152,17 @@
       margin-bottom: 15px;
     }
 
+    .contact-box {
+      background: white;
+      border: 1px solid #e2e8f0;
+      border-radius: 12px;
+      padding: 28px;
+    }
+
+    .contact-box .hero-buttons {
+      margin-top: 18px;
+    }
+
     footer {
       text-align: center;
       padding: 35px;
@@ -135,6 +177,10 @@
       h1 {
         font-size: 36px;
       }
+
+      .hero {
+        padding-top: 55px;
+      }
     }
   </style>
 </head>
@@ -146,70 +192,155 @@
   </nav>
 
   <div class="hero">
-    <div class="tag">Python • pandas • NumPy</div>
 
-    <h1>EPA Air Quality Analysis</h1>
+    <div class="tag">
+      Python • pandas • NumPy
+    </div>
+
+    <h1>
+      EPA Air Quality Analysis
+    </h1>
 
     <p class="subtitle">
       Exploratory analysis of EPA air-quality data to examine AQI patterns,
       compare states, and identify areas with higher air-quality concerns.
     </p>
+
+    <div class="hero-buttons">
+      <a
+        href="epa_air_quality_analysis.py"
+        class="btn primary"
+        target="_blank"
+      >
+        View Python Code
+      </a>
+    </div>
+
   </div>
 
   <section>
-    <h2>Project Overview</h2>
+
+    <h2>
+      Project Overview
+    </h2>
 
     <p>
       This project uses Python, pandas, and NumPy to explore air-quality data
       from the U.S. Environmental Protection Agency. The analysis focuses on
       understanding the structure of the dataset, comparing AQI readings across
-      states, and filtering the data to answer specific questions.
+      states, and filtering the data to answer specific analytical questions.
     </p>
+
   </section>
 
   <section>
-    <h2>Business Question</h2>
+
+    <h2>
+      Business Question
+    </h2>
 
     <p>
       How can air-quality data be organized and analyzed to identify patterns,
       compare geographic areas, and highlight locations with higher AQI values?
     </p>
+
   </section>
 
   <section>
-    <h2>Tools & Skills Used</h2>
+
+    <h2>
+      Tools & Skills Used
+    </h2>
 
     <div class="skills">
+
       <span class="skill">Python</span>
+
       <span class="skill">pandas</span>
+
       <span class="skill">NumPy</span>
+
       <span class="skill">Data Cleaning</span>
+
       <span class="skill">Boolean Masking</span>
+
       <span class="skill">GroupBy</span>
+
       <span class="skill">Data Filtering</span>
+
       <span class="skill">Summary Statistics</span>
+
+      <span class="skill">Functions</span>
+
+      <span class="skill">Dictionaries</span>
+
+      <span class="skill">Data Structures</span>
+
     </div>
+
   </section>
 
   <section>
-    <h2>Analysis Process</h2>
+
+    <h2>
+      Analysis Process
+    </h2>
 
     <ul>
-      <li>Loaded CSV data into pandas DataFrames.</li>
-      <li>Reviewed DataFrame structure using head(), info(), and describe().</li>
-      <li>Counted rows by state and county using value_counts().</li>
-      <li>Sorted AQI values from highest to lowest.</li>
-      <li>Selected rows using iloc[].</li>
-      <li>Created Boolean masks to filter California and Washington data.</li>
-      <li>Calculated mean AQI values for Los Angeles County.</li>
-      <li>Grouped data by state using groupby().</li>
-      <li>Combined multiple datasets using pd.concat().</li>
-      <li>Used NumPy arrays to calculate summary statistics.</li>
+
+      <li>
+        Loaded EPA air-quality data into pandas DataFrames.
+      </li>
+
+      <li>
+        Reviewed DataFrame structure using head(), info(), and describe().
+      </li>
+
+      <li>
+        Counted observations by state and county using value_counts().
+      </li>
+
+      <li>
+        Sorted AQI values from highest to lowest.
+      </li>
+
+      <li>
+        Selected specific rows using iloc[].
+      </li>
+
+      <li>
+        Created Boolean masks to filter California and Washington data.
+      </li>
+
+      <li>
+        Calculated mean AQI values for Los Angeles County.
+      </li>
+
+      <li>
+        Grouped data by state using groupby().
+      </li>
+
+      <li>
+        Combined datasets and organized state-level analysis.
+      </li>
+
+      <li>
+        Created reusable Python functions for county-level analysis.
+      </li>
+
+      <li>
+        Used NumPy arrays to calculate AQI summary statistics.
+      </li>
+
     </ul>
+
   </section>
 
   <section>
-    <h2>Example Python Code</h2>
+
+    <h2>
+      Example Python Code
+    </h2>
 
     <div class="code-box">
 top3.groupby('state_name')['aqi'].mean()
@@ -223,36 +354,121 @@ combined_df[
     & (combined_df['aqi'] >= 51)
 ]
     </div>
+
   </section>
 
   <section>
-    <h2>Key Findings</h2>
+
+    <h2>
+      Key Findings
+    </h2>
 
     <div class="finding">
-      California contained the largest number of observations among the initial
-      three states examined in the dataset.
+
+      California contained the largest number of observations among the
+      initial three states examined in the dataset.
+
     </div>
 
     <div class="finding">
+
       Los Angeles County appeared more frequently than any other California
       county in the dataset, making it useful for a more focused AQI analysis.
+
     </div>
 
     <div class="finding">
+
       Boolean masking made it possible to isolate specific states and AQI
-      thresholds, including Washington observations with AQI values of 51 or higher.
+      thresholds, including Washington observations with AQI values of
+      51 or higher.
+
     </div>
+
+    <div class="finding">
+
+      NumPy was used to calculate measures such as minimum, maximum,
+      median, standard deviation, and the percentage of AQI readings
+      meeting a selected threshold.
+
+    </div>
+
   </section>
 
   <section>
-    <h2>What I Learned</h2>
+
+    <h2>
+      What I Learned
+    </h2>
 
     <p>
       This project strengthened my ability to work with pandas DataFrames,
-      filter and group data, calculate summary statistics, and use Boolean
-      conditions to answer specific analytical questions. It also reinforced
-      how Python can be used to efficiently explore and summarize large datasets.
+      NumPy arrays, Python data structures, reusable functions, filtering,
+      grouping, and summary statistics. It also reinforced how Python can
+      be used to organize, explore, and analyze larger datasets efficiently
+      while answering specific analytical questions.
     </p>
+
+  </section>
+
+  <section>
+
+    <div class="contact-box">
+
+      <h2>
+        Connect With Me
+      </h2>
+
+      <p>
+        Explore more of my work, professional experience, and data
+        visualization projects.
+      </p>
+
+      <div class="hero-buttons">
+
+        <a
+          href="Denae_Camacho_Data_Analyst_Resume_2026.pdf"
+          class="btn primary"
+          target="_blank"
+        >
+          View Résumé
+        </a>
+
+        <a
+          href="https://www.linkedin.com/in/denae-camacho/"
+          class="btn secondary"
+          target="_blank"
+        >
+          LinkedIn
+        </a>
+
+        <a
+          href="https://github.com/DenaeCamachoTx"
+          class="btn secondary"
+          target="_blank"
+        >
+          GitHub
+        </a>
+
+        <a
+          href="https://public.tableau.com/app/profile/denae.camacho/vizzes"
+          class="btn secondary"
+          target="_blank"
+        >
+          Tableau
+        </a>
+
+        <a
+          href="mailto:Denae.CamachoTx@gmail.com"
+          class="btn secondary"
+        >
+          Email Me
+        </a>
+
+      </div>
+
+    </div>
+
   </section>
 
   <footer>
@@ -260,4 +476,5 @@ combined_df[
   </footer>
 
 </body>
+
 </html>
