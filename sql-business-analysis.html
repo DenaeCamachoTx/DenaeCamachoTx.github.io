@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>SQL Business Analysis | Denae Camacho</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: #f8fafc;
+      color: #1f2937;
+      line-height: 1.7;
+    }
+
+    nav {
+      padding: 18px 8%;
+      background: white;
+      border-bottom: 1px solid #e5e7eb;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #2563eb;
+      font-weight: bold;
+    }
+
+    .hero {
+      max-width: 1000px;
+      margin: auto;
+      padding: 80px 8% 50px;
+    }
+
+    .tag {
+      color: #2563eb;
+      font-size: 14px;
+      font-weight: bold;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    h1 {
+      font-size: 46px;
+      color: #0f172a;
+      margin: 10px 0 15px;
+    }
+
+    .subtitle {
+      font-size: 20px;
+      color: #475569;
+      max-width: 750px;
+    }
+
+    .hero-buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 24px;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 11px 18px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: 600;
+      transition: 0.2s ease;
+    }
+
+    .btn.primary {
+      background: #2563eb;
+      color: white;
+    }
+
+    .btn.secondary {
+      background: white;
+      color: #2563eb;
+      border: 1px solid #bfdbfe;
+    }
+
+    .btn:hover {
+      transform: translateY(-1px);
+    }
+
+    section {
+      max-width: 1000px;
+      margin: auto;
+      padding: 35px 8%;
+    }
+
+    h2 {
+      color: #0f172a;
+      font-size: 28px;
+      margin-bottom: 15px;
+    }
+
+    h3 {
+      color: #0f172a;
+      font-size: 20px;
+      margin: 24px 0 10px;
+    }
+
+    p {
+      color: #475569;
+      margin-bottom: 15px;
+    }
+
+    ul {
+      margin-left: 22px;
+      color: #475569;
+    }
+
+    li {
+      margin-bottom: 8px;
+    }
+
+    .skills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 15px;
+    }
+
+    .skill {
+      background: white;
+      border: 1px solid #dbe3ee;
+      padding: 8px 14px;
+      border-radius: 999px;
+      font-size: 14px;
+    }
+
+    .code-box {
+      background: #0f172a;
+      color: #e2e8f0;
+      padding: 22px;
+      border-radius: 10px;
+      overflow-x: auto;
+      font-family: Consolas, monospace;
+      font-size: 14px;
+      margin-top: 15px;
+      white-space: pre-wrap;
+    }
+
+    .finding {
+      background: white;
+      border: 1px solid #e2e8f0;
+      border-left: 4px solid #2563eb;
+      padding: 20px;
+      border-radius: 8px;
+      margin-bottom: 15px;
+    }
+
+    .contact-box {
+      background: white;
+      border: 1px solid #e2e8f0;
+      border-radius: 12px;
+      padding: 28px;
+    }
+
+    .contact-box .hero-buttons {
+      margin-top: 18px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 35px;
+      border-top: 1px solid #e5e7eb;
+      background: white;
+      color: #64748b;
+      font-size: 13px;
+      margin-top: 40px;
+    }
+
+    @media (max-width: 700px) {
+      h1 {
+        font-size: 36px;
+      }
+
+      .hero {
+        padding-top: 55px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <nav>
+    <a href="index.html">← Back to Portfolio</a>
+  </nav>
+
+  <div class="hero">
+
+    <div class="tag">
+      SQL • BigQuery
+    </div>
+
+    <h1>
+      SQL Business Analysis
+    </h1>
+
+    <p class="subtitle">
+      SQL analysis using public datasets to answer business-style questions,
+      compare performance, identify patterns, and summarize large datasets
+      using BigQuery.
+    </p>
+
+    <div class="hero-buttons">
+      <a
+        href="sql_business_analysis.sql"
+        class="btn primary"
+        target="_blank"
+      >
+        View SQL Code
+      </a>
+    </div>
+
+  </div>
+
+  <section>
+
+    <h2>
+      Project Overview
+    </h2>
+
+    <p>
+      This project demonstrates SQL analysis using Google BigQuery and public
+      datasets. The queries were designed to answer different analytical
+      questions using transportation and web-traffic data while applying
+      filtering, aggregation, joins, subqueries, grouping, sorting, and
+      calculated comparisons.
+    </p>
+
+  </section>
+
+  <section>
+
+    <h2>
+      Business Questions
+    </h2>
+
+    <div class="finding">
+      Which station is most frequently used by the bike with the greatest
+      total trip duration in the Austin Bikeshare dataset?
+    </div>
+
+    <div class="finding">
+      Which Citi Bike trips differ the most from the average trip duration
+      of their starting station?
+    </div>
+
+    <div class="finding">
+      Which Google-related Wikipedia articles receive the highest number
+      of views by language and title?
+    </div>
+
+  </section>
+
+  <section>
+
+    <h2>
+      Tools & Skills Used
+    </h2>
+
+    <div class="skills">
+
+      <span class="skill">SQL</span>
+      <span class="skill">Google BigQuery</span>
+      <span class="skill">CTEs</span>
+      <span class="skill">INNER JOIN</span>
+      <span class="skill">Correlated Subqueries</span>
+      <span class="skill">GROUP BY</span>
+      <span class="skill">Aggregation</span>
+      <span class="skill">Filtering</span>
+      <span class="skill">ORDER BY</span>
+      <span class="skill">Aliases</span>
+      <span class="skill">Calculated Fields</span>
+      <span class="skill">Data Analysis</span>
+
+    </div>
+
+  </section>
+
+  <section>
+
+    <h2>
+      Analysis Process
+    </h2>
+
+    <ul>
+      <li>
+        Queried large public datasets in Google BigQuery.
+      </li>
+
+      <li>
+        Used aggregation functions such as SUM(), COUNT(), and AVG().
+      </li>
+
+      <li>
+        Grouped records to summarize activity by bike, station, language,
+        and article title.
+      </li>
+
+      <li>
+        Used a Common Table Expression (CTE) to identify the bike with the
+        greatest total trip duration.
+      </li>
+
+      <li>
+        Joined the CTE back to the Austin Bikeshare dataset using bike_id.
+      </li>
+
+      <li>
+        Used correlated subqueries to compare individual Citi Bike trips
+        with the average duration for the same starting station.
+      </li>
+
+      <li>
+        Created calculated differences to identify trips that were farthest
+        above station averages.
+      </li>
+
+      <li>
+        Used LIKE filtering to isolate Google-related Wikipedia article titles.
+      </li>
+
+      <li>
+        Sorted results to surface the most relevant observations.
+      </li>
+    </ul>
+
+  </section>
+
+  <section>
+
+    <h2>
+      Example SQL Code
+    </h2>
+
+    <div class="code-box">
+WITH longest_used_bike AS (
+    SELECT
+        bike_id,
+        SUM(duration_minutes) AS total_trip_duration
+    FROM `bigquery-public-data.austin_bikeshare.bikeshare_trips`
+    GROUP BY bike_id
+    ORDER BY total_trip_duration DESC
+    LIMIT 1
+)
+
+SELECT
+    trips.start_station_id,
+    COUNT(*) AS trip_count
+FROM longest_used_bike AS longest
+INNER JOIN `bigquery-public-data.austin_bikeshare.bikeshare_trips` AS trips
+    ON longest.bike_id = trips.bike_id
+GROUP BY trips.start_station_id
+ORDER BY trip_count DESC
+LIMIT 1;
+    </div>
+
+  </section>
+
+  <section>
+
+    <h2>
+      Query Highlights
+    </h2>
+
+    <h3>
+      Austin Bikeshare
+    </h3>
+
+    <p>
+      A Common Table Expression identifies the bike with the highest total
+      recorded trip duration. That result is then joined back to the trip
+      dataset to determine the starting station used most often by that bike.
+    </p>
+
+    <h3>
+      New York Citi Bike
+    </h3>
+
+    <p>
+      Correlated subqueries calculate the average trip duration for each
+      starting station and compare individual trips against that benchmark.
+      The results are ranked to identify the trips with the largest difference
+      from their station average.
+    </p>
+
+    <h3>
+      Wikipedia Page Views
+    </h3>
+
+    <p>
+      The analysis filters article titles containing the word Google,
+      aggregates views by language and title, and sorts the results from
+      highest to lowest total views.
+    </p>
+
+  </section>
+
+  <section>
+
+    <h2>
+      Key Takeaways
+    </h2>
+
+    <div class="finding">
+      CTEs can break multi-step analytical questions into smaller,
+      easier-to-understand query components.
+    </div>
+
+    <div class="finding">
+      Joins make it possible to connect an intermediate analytical result
+      back to detailed transactional data.
+    </div>
+
+    <div class="finding">
+      Correlated subqueries allow each record to be compared against a
+      benchmark calculated from related records.
+    </div>
+
+    <div class="finding">
+      Aggregation, filtering, grouping, and sorting can transform large
+      datasets into focused results that answer specific analytical questions.
+    </div>
+
+  </section>
+
+  <section>
+
+    <h2>
+      What I Learned
+    </h2>
+
+    <p>
+      This project strengthened my ability to write multi-step SQL queries,
+      work with large datasets in BigQuery, combine tables and intermediate
+      results, calculate benchmarks, and use aggregation and filtering to
+      answer analytical questions. It also reinforced the importance of
+      structuring SQL so that complex logic remains clear and readable.
+    </p>
+
+  </section>
+
+  <section>
+
+    <div class="contact-box">
+
+      <h2>
+        Connect With Me
+      </h2>
+
+      <p>
+        Explore more of my work, professional experience, and data
+        visualization projects.
+      </p>
+
+      <div class="hero-buttons">
+
+        <a
+          href="Denae_Camacho_Data_Analyst_Resume_2026.pdf"
+          class="btn primary"
+          target="_blank"
+        >
+          View Résumé
+        </a>
+
+        <a
+          href="https://www.linkedin.com/in/denae-camacho/"
+          class="btn secondary"
+          target="_blank"
+        >
+          LinkedIn
+        </a>
+
+        <a
+          href="https://github.com/DenaeCamachoTx"
+          class="btn secondary"
+          target="_blank"
+        >
+          GitHub
+        </a>
+
+        <a
+          href="https://public.tableau.com/app/profile/denae.camacho/vizzes"
+          class="btn secondary"
+          target="_blank"
+        >
+          Tableau
+        </a>
+
+        <a
+          href="mailto:Denae.CamachoTx@gmail.com"
+          class="btn secondary"
+        >
+          Email Me
+        </a>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <footer>
+    © 2026 Denae Camacho | Data Analytics Portfolio
+  </footer>
+
+</body>
+
+</html>
