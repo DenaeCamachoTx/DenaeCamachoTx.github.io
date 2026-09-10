@@ -369,6 +369,86 @@ LIMIT 1;
 
   </section>
 
+ <section>
+
+  <h2>
+    Query Results
+  </h2>
+
+  <p>
+    The Citi Bike analysis compared individual trip durations with the
+    average trip duration for each starting station. The table below shows
+    the five trips with the largest differences from their station averages.
+  </p>
+
+  <div style="overflow-x: auto; margin-top: 20px;">
+
+    <table style="width: 100%; border-collapse: collapse; background: white;">
+
+      <thead>
+        <tr style="border-bottom: 2px solid #dbe3ee; text-align: left;">
+          <th style="padding: 12px;">Station</th>
+          <th style="padding: 12px;">Trip Duration</th>
+          <th style="padding: 12px;">Station Average</th>
+          <th style="padding: 12px;">Difference</th>
+        </tr>
+      </thead>
+
+      <tbody>
+
+        <tr style="border-bottom: 1px solid #e5e7eb;">
+          <td style="padding: 12px;">3082</td>
+          <td style="padding: 12px;">19,510,049</td>
+          <td style="padding: 12px;">2,061.72</td>
+          <td style="padding: 12px;">19,507,987.28</td>
+        </tr>
+
+        <tr style="border-bottom: 1px solid #e5e7eb;">
+          <td style="padding: 12px;">3349</td>
+          <td style="padding: 12px;">15,962,256</td>
+          <td style="padding: 12px;">2,908.95</td>
+          <td style="padding: 12px;">15,959,347.05</td>
+        </tr>
+
+        <tr style="border-bottom: 1px solid #e5e7eb;">
+          <td style="padding: 12px;">3041</td>
+          <td style="padding: 12px;">15,020,934</td>
+          <td style="padding: 12px;">11,295.05</td>
+          <td style="padding: 12px;">15,009,638.95</td>
+        </tr>
+
+        <tr style="border-bottom: 1px solid #e5e7eb;">
+          <td style="padding: 12px;">3042</td>
+          <td style="padding: 12px;">13,931,824</td>
+          <td style="padding: 12px;">14,540.53</td>
+          <td style="padding: 12px;">13,917,283.47</td>
+        </tr>
+
+        <tr>
+          <td style="padding: 12px;">3042</td>
+          <td style="padding: 12px;">13,586,276</td>
+          <td style="padding: 12px;">14,540.53</td>
+          <td style="padding: 12px;">13,571,735.47</td>
+        </tr>
+
+      </tbody>
+
+    </table>
+
+  </div>
+
+  <div class="finding" style="margin-top: 25px;">
+    The results revealed several extreme trip-duration outliers. The largest
+    observation began at station 3082 and exceeded that station's average
+    duration by approximately 19.5 million seconds. Station 3042 also appeared
+    multiple times among the largest differences. These unusually large values
+    would warrant additional investigation before being used in broader
+    performance analysis.
+  </div>
+
+</section>
+  
+  
   <section>
 
     <h2>
